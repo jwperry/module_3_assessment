@@ -12,11 +12,18 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def destroy
-    respond_with "fire!"
+    @item = Item.find(params[:id])
+    if @item.destroy
+      respond_with 204
+    else
+      respond_with 500
+    end
   end
 
   def create
-    respond_with "woo!"
+    @item = Item.create(name: params["name"],
+                        description: params["description"],
+                        image_url: params["image_url"])
+    respond_with(@item, status: 201)
   end
-
 end
