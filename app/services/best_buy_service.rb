@@ -12,7 +12,8 @@ class BestBuyService
   end
 
   def products(search)
-    parse(connection.get("v1/products(search=#{search})?show=sku,name,customerReviewAverage,shortDescription,salePrice,image&pageSize=15&page=1"))
+    searches = search.split(" ").join("&search=")
+    parse(connection.get("v1/products(search=#{searches})?show=sku,name,customerReviewAverage,shortDescription,salePrice,image&pageSize=15&page=1"))
   end
 
   private

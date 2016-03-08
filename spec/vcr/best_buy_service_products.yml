@@ -27,7 +27,7 @@ http_interactions:
       Server:
       - thin 1.6.1 codename Death Proof
       Date:
-      - Tue, 08 Mar 2016 18:40:38 GMT
+      - Tue, 08 Mar 2016 18:52:52 GMT
       Connection:
       - close
     body:
@@ -167,5 +167,5 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Tue, 08 Mar 2016 18:40:37 GMT
+  recorded_at: Tue, 08 Mar 2016 18:52:52 GMT
 recorded_with: VCR 3.0.1
