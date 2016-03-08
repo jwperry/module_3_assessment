@@ -1,7 +1,7 @@
-class Api::V1::ApiItemsController < ApplicationController
+class Api::V1::ItemsController < ApplicationController
   respond_to :json
 
-  def all_items
+  def index
     @items = Item.all
     respond_with @items
   end
