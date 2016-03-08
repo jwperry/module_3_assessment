@@ -1,0 +1,9 @@
+<% @matching[:products].each do |prod| %>
+  <%= image_tag "#{prod[:image]}" %>
+  <h2>Name: <%= prod[:name] %></h2>
+  <h4>SKU: <%= prod[:sku] %></h4>
+  <h4>Avg Rating: <%= prod[:customerReviewAverage] %></h4>
+  <h4>Price: <%= prod[:salePrice] %></h4>
+  <h5>Description: <%= prod[:shortDescription] %></h5>
+  <br><br>
+<% end %>
