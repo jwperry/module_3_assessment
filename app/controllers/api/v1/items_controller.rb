@@ -3,6 +3,7 @@ class Api::V1::ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    binding.pry
     respond_with @items
   end
 

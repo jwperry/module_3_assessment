@@ -47,6 +47,7 @@ GEM
     coffee-script-source (1.10.0)
     commonjs (0.2.7)
     database_cleaner (1.5.1)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
     faker (1.6.3)
@@ -142,6 +143,23 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.5.0)
     ref (2.0.0)
+    rspec-core (3.4.3)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-rails (3.4.2)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
     ruby_parser (3.8.1)
       sexp_processor (~> 4.1)
     sass (3.2.19)
@@ -151,6 +169,8 @@ GEM
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
     sexp_processor (4.7.0)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
     slop (3.6.0)
     spring (1.6.4)
     sprockets (2.12.4)
@@ -203,7 +223,9 @@ DEPENDENCIES
   mocha
   pry
   rails (= 4.1.4)
+  rspec-rails
   sass-rails (~> 4.0.3)
+  shoulda-matchers (~> 3.1)
   spring
   sqlite3
   therubyracer

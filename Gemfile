@@ -16,6 +16,7 @@ gem "minitest-rails"
 gem "pry"
 gem "faraday"
 gem "figaro"
+gem "rspec-rails"
 
 
 group :development do
@@ -29,6 +30,7 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'mocha'
+  gem "shoulda-matchers", "~> 3.1"
 end
 
 group :test do
