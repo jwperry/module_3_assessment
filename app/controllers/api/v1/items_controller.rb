@@ -3,12 +3,12 @@ class Api::V1::ItemsController < ApplicationController
 
   def index
     @items = Item.all
-    binding.pry
     respond_with @items
   end
 
   def show
-    respond_with "item!"
+    @item = Item.find(params[:id])
+    respond_with @item
   end
 
   def destroy
