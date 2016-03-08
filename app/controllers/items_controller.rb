@@ -10,5 +10,6 @@ class ItemsController < ApplicationController
   def search
     search = params["q"]
     matching = BestBuyService.new.products(search)
+    binding.pry
   end
 end

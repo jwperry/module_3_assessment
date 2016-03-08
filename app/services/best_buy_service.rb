@@ -7,11 +7,12 @@ class BestBuyService
     @connection = Faraday.new(url: "http://api.bestbuy.com") do |faraday|
       faraday.adapter Faraday.default_adapter
       faraday.params[:apiKey] = ENV["BEST_BUY_KEY"]
+      faraday.params[:format] = "json"
     end
   end
 
   def products(search)
-    parse(connection.get("v1/products?format=json&show=id"))
+    parse(connection.get("v1/products(search=#{search})?show=sku,name,customerReviewAverage,shortDescription,salePrice,image&pageSize=15&page=1"))
   end
 
   private
